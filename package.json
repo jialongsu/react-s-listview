@@ -11,8 +11,16 @@
     "clean": "rimraf dist lib && mkdir lib",
     "lib": "npm run clean && babel app/components --out-dir lib --copy-files"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1035901787/react-s-listview.git"
+  },
   "author": "arno",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1035901787/react-s-listview/issues"
+  },
+  "homepage": "https://github.com/1035901787/react-s-listview#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-cli": "^6.26.0",
