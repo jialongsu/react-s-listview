@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>宠爱友家</title>
+    <style>
+            .loading_center {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      height: 60px;
+      width: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      -webkit-animation: loading-center-absolute 1s infinite;
+      animation: loading-center-absolute 1s infinite;
+      z-index: 99999;
+    }
+    .object{
+      width: 20px;
+      height: 20px;
+      background-color: #FFF;
+      float: left;
+      -moz-border-radius: 50% 50% 50% 50%;
+      -webkit-border-radius: 50% 50% 50% 50%;
+      border-radius: 50% 50% 50% 50%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      transform: scale(0.5);
+    }
+    .object:nth-child(2n+0) {
+      margin-right: 0;
+    }
+    .object_one{
+      background-color: rgba(171,125,34,1);
+      -webkit-animation: object_one 1s infinite;
+      animation: object_one 1s infinite;
+    }
+    .object_two{
+      background-color: rgba(111,164,179,1);
+      -webkit-animation: object_two 1s infinite;
+      animation: object_two 1s infinite;
+    }
+    .object_three{
+      background-color: rgba(93,172,133,1);
+      -webkit-animation: object_three 1s infinite;
+      animation: object_three 1s infinite;
+    }
+    .object_four{
+      background-color: rgba(190,31,86,1);
+      -webkit-animation: object_four 1s infinite;
+      animation: object_four 1s infinite;
+    }
+    
+    @-webkit-keyframes loading-center-absolute{
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    
+    }
+    @keyframes loading-center-absolute{
+      100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes object_one{
+      50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+      }
+    }
+    @keyframes object_one{
+      50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+      }
+    }
+    @-webkit-keyframes object_two{
+      50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+      }
+    }
+    @keyframes object_two{
+      50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+      }
+    }
+    @-webkit-keyframes object_three{
+      50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+      }
+    }
+    @keyframes object_three{
+      50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+      }
+    }
+    @-webkit-keyframes object_four{
+      50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+      }
+    }
+    @keyframes object_four{
+      50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+      }
+    }
+        </style>
+    <script type="text/javascript" >
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+</head>
+<body>
+<div id="app">
+    <div class="loading_center">
+        <div class="object object_one" ></div>
+        <div class="object object_two"></div>
+        <div class="object object_three"></div>
+        <div class="object object_four" ></div>
+    </div>
+</div>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script async src="http://cdn.lifeis.com.cn/exif.js"></script>
+</body>
+</html>

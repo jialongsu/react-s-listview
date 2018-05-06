@@ -1,0 +1,118 @@
+$theme-color:#477ae4;
+
+.flex_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row-ali{
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-bet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-row-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flex_bet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex_clu_bet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-clu-ali{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-clu-bet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-clu-end{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flex-clu-cen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin lines($val){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $val;
+  -webkit-box-orient: vertical;
+}
+.boxshadow {
+  -moz-box-shadow:0px 2px 6px #C2C2C2, 0px 3px 5px #b5b5b5; 
+  -webkit-box-shadow:0px 2px 6px #C2C2C2, 0px 3px 5px #b5b5b5; 
+  box-shadow:0px 2px 6px #C2C2C2, 0px 3px 5px #b5b5b5; 
+}
+
+.showPop_slidBtm{
+  animation: showAni_slidBtm 0.3s ease-out forwards;
+}
+.hidePop_slidBtm{
+  animation: hideAni_slidBtm 0.3s ease-out forwards;
+}
+.showPop_slidTop{
+  animation: showAni_slidTop 0.3s ease-out forwards;
+}
+.hidePop_slidTop{
+  animation: hideAni_slidTop 0.3s ease-out forwards;
+}
+
+.showPop_fade{
+  animation: showAni_fade 0.3s ease-out forwards;
+}
+.hidePop_fade{
+  animation: hideAni_fade 0.3s ease-out forwards;
+}
+
+@keyframes showAni_slidBtm {
+  from {transform: translate3d(0,100%,0);}
+  to {transform: translate3d(0,0,0);}
+}
+@keyframes hideAni_slidBtm {
+  from {transform: translate3d(0,0,0);}
+  to {transform: translate3d(0,100%,0);}
+}
+@keyframes showAni_slidTop {
+  from {transform: translate3d(0,-100%,0);}
+  to {transform: translate3d(0,0,0);}
+}
+@keyframes hideAni_slidTop {
+  from {transform: translate3d(0,0,0);}
+  to {transform: translate3d(0,-100%,0);}
+}
+@keyframes showAni_fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes hideAni_fade {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}

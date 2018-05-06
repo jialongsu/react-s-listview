@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import "../../common/baseStyle/PxToRem.scss";
+@import "../../common/baseStyle/BaseColoeStyle.scss";
+
+.wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	overflow: hidden;
+}
+.scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	min-height:101%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+$pullDown_height:70px;
+$pullUp_height:45px;
+.pullDown{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: px2em(12px);
+	color: #333;
+	padding: px2em(20px) 0;
+}
+
+.show_pullDown{
+	margin-top:$pullDown_height;
+}
+
+.hide_pullDown{
+	margin-top:-$pullDown_height;
+}
+
+.pullUp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	font-size: px2em(12px);
+	color: #333;
+}
+
+.lodingimg{
+	width:px2em(16px);
+	height:px2em(16px);
+	margin-right: px2em(10px);
+}
+
+.arrowsimg{
+	width:px2em(12px);
+	height:px2em(18px);
+	margin-right: px2em(10px);
+}
+
+.arrowsimg_active{
+	animation:arrows 0.3s forwards;
+}
+
+@keyframes arrows {
+	from{transform:rotate(0deg)}
+	to{transform:rotate(180deg)}
+}
+.placeholder{
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+}
+
+
