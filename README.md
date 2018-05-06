@@ -90,7 +90,7 @@ export default class DemoList extends PureComponent {
 | pullUpLoading | bool      |   true |   是否显示上拉加载样式 |
 | loadMore | bool      |   true |   是否上拉加载 |
 | startY | number      |   0 |   listview显示位置 |
-| isLazyload | bool      |   true |   是否启用懒加载 |
+| isLazyload | bool      |   false |   是否启用懒加载 |
 | itemHeight | string      |  0  |   启用懒加载后（必传）item的高度 |
 | itemClassName | string      |  无  |   启用懒加载后可设置item class |
 | placeholder | any      |  无  |   懒加载未加载时显示的占位布局 |
