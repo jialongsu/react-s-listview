@@ -6,7 +6,7 @@
 
 这是一个基于JavaScript原生实现的react组件，实现了上拉加载更多，和下拉刷新，以及懒加载的列表组件
 
-![这里写图片描述](https://github.com/1035901787/react-s-listview/blob/master/source/20180506112030.gif)
+![](https://github.com/1035901787/react-s-listview/blob/master/source/20180506112030.gif)
 
 # 安装
 
@@ -77,7 +77,7 @@ export default class DemoList extends PureComponent {
 
 |属性         | 值类型          | 默认值  | 描述  |
 | ------------- |:-------------:| -----:| -----:|
-| dataSource     | array | 列表数据源 | [] |
+| dataSource     | array | [] | 列表数据源 |
 | renderRow      | any      |   无 |   列表item布局 |
 | isRefreshPullDown | bool      |   true |   是否启用下拉刷新 |
 | isRefreshPullUp | bool      |   true |   是否启用上拉加载 |
@@ -95,3 +95,82 @@ export default class DemoList extends PureComponent {
 | itemClassName | string      |  无  |   启用懒加载后可设置item class |
 | placeholder | any      |  无  |   懒加载未加载时显示的占位布局 |
 
+# 内置组件-LazyloadView
+
+使用场景：list列表中，item高度不一致，如下：
+
+```js
+import ListView, {LazyloadView} from 'components/ListView/ListView';
+
+export default class Demo extends PureComponent {
+
+    state = {
+        ary: [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]
+    }
+
+    componentDidMount() {
+        this.listView = this.refs['listview'];
+    }
+
+    _getScrollView = () => {
+		return this.listView.getScroller();
+	}
+
+    _onPullDownRefrsh = async (resolve, reject) => {
+	};
+
+	_onPullUpRefrsh = async (resolve, reject) => {
+        const {ary} = this.state;
+        this.setState({
+            ary: ary.concat([1, 2, 3])
+        });
+        resolve(0);
+    };
+
+    _renderRow = ({data, index}) => {
+        const {router} = this.props;
+        let item, height;
+        if(index % 2 === 0) {
+            item = <div style={{backgroundColor: '#000', height: '100%'}}/>;
+            height = 100;
+        }else {
+            item = <div style={{backgroundColor: 'red', height: '100%'}}/>;
+            height = 150;
+        }
+        return (
+            <LazyloadView
+                key={index}
+                getScroller={this._getScrollView}
+                height={`${height / 37.5}rem`}>
+                {item}
+            </LazyloadView>
+        );
+    }
+
+    render(){
+        const {router} = this.props;
+        const {ary} = this.state;
+        return(
+            <ListView
+                ref="listview"
+                dataSource={ary}
+                renderRow={this._renderRow}
+                startY={0}
+                loadMore={true}
+                onPullDownRefrsh={this._onPullDownRefrsh}
+                onPullUpRefrsh={this._onPullUpRefrsh}/>
+        )
+    }
+}
+```
+
+# 属性-LazyloadView
+
+|属性         | 值类型          | 默认值  | 描述  |
+| ------------- |:-------------:| -----:| -----:|
+| height     | string | '0px' | item高度（必传） |
+| getScroller     | func | 无 | 获取listview对象 |
+| placeholder     | any | 默认 | item未显示时占位 |
+| itemClassName     | string | 无 | item class |
+
+![](https://github.com/1035901787/react-s-listview/blob/master/source/20180507111145.gif)
