@@ -1,9 +1,5 @@
 # React-S-ListView
 
-[![Build Status][build-badge]][build]
-[![Version][version-badge]][package]
-[![MIT License][license-badge]][license]
-
 这是一个基于JavaScript原生实现的react组件，实现了上拉加载更多，和下拉刷新，以及懒加载的列表组件
 
 ![](https://github.com/1035901787/react-s-listview/blob/master/source/20180506112030.gif)
@@ -79,6 +75,8 @@ export default class DemoList extends PureComponent {
 | ------------- |:-------------:| -----:| -----:|
 | dataSource     | array | [] | 列表数据源 |
 | renderRow      | any      |   无 |   列表item布局 |
+| renderHeader      | any      |   无 |   列表头部布局 |
+| renderFooter      | any      |   无 |   列表尾部布局 |
 | isRefreshPullDown | bool      |   true |   是否启用下拉刷新 |
 | isRefreshPullUp | bool      |   true |   是否启用上拉加载 |
 | onPullDownRefrsh | func      |   无 |   下拉刷新回调事件 |
