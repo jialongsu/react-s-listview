@@ -1,3 +1,3 @@
-import ListView from './app/components/ListView/ListView';
+import ListView from './lib/ListView/ListView';
 
 export default ListView;

@@ -1,0 +1,13 @@
+$themColor: #F08200;
+$themColor-red: #FF5555;
+$themColor-black: #333;
+$themColor-border-gray: #E1E1E1;
+
+
+@mixin lines($val){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $val;
+  -webkit-box-orient: vertical;
+}

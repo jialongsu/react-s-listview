@@ -7,13 +7,13 @@
 # 安装
 
 ```sh
-npm install react-s-listview
+npm install react-s-listview or  yarn add react-s-listview
 ```
 
 # 使用
 
 ```js
-import ListView from 'components/ListView/ListView';
+import ListView from 'react-s-listview';
 
 export default class DemoList extends PureComponent {
 
@@ -37,7 +37,7 @@ export default class DemoList extends PureComponent {
             this.setState({
                 ary: ary.concat([1, 2, 3])
             });
-            resolve(0);
+            resolve();
         }, 1000);
     };
 
@@ -58,11 +58,12 @@ export default class DemoList extends PureComponent {
                 renderRow={this._renderRow}
                 startY={scrollY}
                 loadMore={loadMore}
-                isLazyload={true}
-                itemHeight={`${313 / 37.5}rem`}
+                isLazyload={true} //懒加载
+                itemHeight={`${313 / 37.5}rem`} //选用懒加载时，需指定item的高度，否则懒加载将无效
                 itemClassName={styles.listCon}
                 onPullDownRefrsh={this._onPullDownRefrsh}
-                onPullUpRefrsh={this._onPullUpRefrsh}/>
+                onPullUpRefrsh={this._onPullUpRefrsh}
+            />
         )
     }
 }
