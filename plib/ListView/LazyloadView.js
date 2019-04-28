@@ -27,11 +27,6 @@ var _ListView = _interopRequireDefault(require("./ListView.scss"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
 var LazyloadView =
 /*#__PURE__*/
 function (_PureComponent) {
@@ -135,13 +130,6 @@ function (_PureComponent) {
         className: _ListView.default.placeholder
       }));
     }
-  }, {
-    key: "__reactstandin__regenerateByEval",
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
-    }
   }]);
   return LazyloadView;
 }(_react.PureComponent);
@@ -156,21 +144,3 @@ LazyloadView.propTypes = {
 LazyloadView.defaultProps = {
   height: '0px'
 };
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(LazyloadView, "LazyloadView", "/Users/sujialong/Documents/myPlugins_NPM/react-s-listview/lib/ListView/LazyloadView.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();

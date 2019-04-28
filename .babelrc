@@ -4,7 +4,7 @@
     "@babel/preset-env",
   ],
   "plugins": [
-    "react-hot-loader/babel", // 热更新插件
+    // "react-hot-loader/babel", // 热更新插件
     "@babel/plugin-syntax-dynamic-import",
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["@babel/plugin-transform-runtime", {"regenerator": true}],

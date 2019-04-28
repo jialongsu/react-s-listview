@@ -27,11 +27,6 @@ var _loading = _interopRequireDefault(require("./images/loading.gif"));
 
 var _arrows = _interopRequireDefault(require("./images/arrows.jpeg"));
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
 var PullDown =
 /*#__PURE__*/
 function (_PureComponent) {
@@ -105,33 +100,8 @@ function (_PureComponent) {
         src: loadImg
       }) : null, _react.default.createElement("span", null, value));
     }
-  }, {
-    key: "__reactstandin__regenerateByEval",
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
-    }
   }]);
   return PullDown;
 }(_react.PureComponent);
 
 exports.default = PullDown;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(PullDown, "PullDown", "/Users/sujialong/Documents/myPlugins_NPM/react-s-listview/lib/ListView/PullDownView.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();

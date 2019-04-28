@@ -4,11 +4,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
 /*! iScroll v5.2.0 ~ (c) 2008-2016 Matteo Spinelli ~ http://cubiq.org/license */
 
 /* eslint-disable */
@@ -2060,21 +2055,3 @@ var gIScroll;
 })(window, document, Math);
 
 module.exports = gIScroll;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(gIScroll, "gIScroll", "/Users/sujialong/Documents/myPlugins_NPM/react-s-listview/lib/ListView/libs/iscroll-probe.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();

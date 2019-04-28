@@ -33,11 +33,9 @@ var _PullDownView = _interopRequireDefault(require("./PullDownView"));
 
 var _LazyloadView = _interopRequireDefault(require("./LazyloadView"));
 
-(function () {
-  var enterModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).enterModule;
-  enterModule && enterModule(module);
-})();
-
+/**
+ * Created by sujialong on 2017/5/25.
+ */
 var ListView =
 /*#__PURE__*/
 function (_Component) {
@@ -479,13 +477,6 @@ function (_Component) {
         pullUpTexts: pullUpTexts
       })));
     }
-  }, {
-    key: "__reactstandin__regenerateByEval",
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
-    }
   }]);
   return ListView;
 }(_react.Component);
@@ -560,22 +551,3 @@ ListView.defaultProps = {
 };
 var LazyloadView = _LazyloadView.default;
 exports.LazyloadView = LazyloadView;
-;
-
-(function () {
-  var reactHotLoader = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).default;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(ListView, "ListView", "/Users/sujialong/Documents/myPlugins_NPM/react-s-listview/lib/ListView/ListView.js");
-  reactHotLoader.register(LazyloadView, "LazyloadView", "/Users/sujialong/Documents/myPlugins_NPM/react-s-listview/lib/ListView/ListView.js");
-})();
-
-;
-
-(function () {
-  var leaveModule = (typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal : require('react-hot-loader')).leaveModule;
-  leaveModule && leaveModule(module);
-})();
