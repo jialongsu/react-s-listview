@@ -23,7 +23,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _iscrollProbe = _interopRequireDefault(require("./lib/iscroll-probe"));
+var _iscrollProbe = _interopRequireDefault(require("./libs/iscroll-probe"));
 
 var _ListView = _interopRequireDefault(require("./ListView.scss"));
 
