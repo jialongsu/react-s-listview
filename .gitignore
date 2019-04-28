@@ -1,3 +1,9 @@
+.DS_Store
+.vscode
+build/
+dist/
+lib/
+node_modules/
+npm-debug.log
+yarn-error.log
 
-.svn
-node_modules

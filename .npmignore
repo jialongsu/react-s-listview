@@ -1,1 +1,10 @@
-./app/components
+dist/
+node_modules
+webpack
+dist/
+lib/
+src/
+node_modules/
+npm-debug.log
+yarn-error.log
+.*

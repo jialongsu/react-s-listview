@@ -1,4 +1,18 @@
 {
-  "presets": ["es2015", "react","stage-0"],
-  "plugins": ["transform-decorators-legacy","transform-runtime"]
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env",
+  ],
+  "plugins": [
+    "react-hot-loader/babel", // 热更新插件
+    "@babel/plugin-syntax-dynamic-import",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-transform-runtime", {"regenerator": true}],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    // ['import', {
+    //   'libraryName': 'antd',
+    //   'libraryDirectory': 'es',
+    //   'style': 'css' // `style: true` 会加载 less 文件
+    // }]
+  ],
 }

@@ -22,37 +22,43 @@ module.exports = {
   output: {
     filename: '[name].[hash].js',
     chunkFilename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, '../dist/treasureCenter'),
+    path: path.resolve(__dirname, '../dist/react-s-listview'),
     publicPath: config.publicPath
   },
   module: {
     rules: [
       {
         test: /\.js[x]?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules|plib/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                '@babel/preset-react',
-                '@babel/preset-env',
-              ],
-              plugins: [
-                'react-hot-loader/babel', // 热更新插件
-                '@babel/plugin-syntax-dynamic-import',
-                ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-                ['@babel/plugin-transform-runtime', {'regenerator': true}],
-                ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-                // ['import', {
-                //   'libraryName': 'antd',
-                //   'libraryDirectory': 'es',
-                //   'style': 'css' // `style: true` 会加载 less 文件
-                // }]
-              ],
               cacheDirectory: true,
             }
           },
+          // {
+          //   loader: 'babel-loader',
+          //   options: {
+          //     presets: [
+          //       '@babel/preset-react',
+          //       '@babel/preset-env',
+          //     ],
+          //     plugins: [
+          //       'react-hot-loader/babel', // 热更新插件
+          //       '@babel/plugin-syntax-dynamic-import',
+          //       ['@babel/plugin-proposal-decorators', { 'legacy': true }],
+          //       ['@babel/plugin-transform-runtime', {'regenerator': true}],
+          //       ['@babel/plugin-proposal-class-properties', { 'loose': true }],
+          //       // ['import', {
+          //       //   'libraryName': 'antd',
+          //       //   'libraryDirectory': 'es',
+          //       //   'style': 'css' // `style: true` 会加载 less 文件
+          //       // }]
+          //     ],
+          //     cacheDirectory: true,
+          //   }
+          // },
           {
             loader: 'eslint-loader',
             options: {

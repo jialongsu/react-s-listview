@@ -6,10 +6,13 @@
     "commonjs": true
   },
   "globals": {
-    "wx": true
+    "wx": true,
+    "AMap": true
   },
-  "extends": "eslint:recommended",
-  "installedESLint": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -30,15 +33,28 @@
       "error",
       "unix"
     ],
+    "semi": ["error", "always"],
+    "dot-location": 2,
+    "strict": 2,
+    "indent": ["error", 2],  
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": ["error", "single"],
+    "react/prop-types": 0,
     "no-empty": 0,
     "comma-dangle": 0,
-    "no-unused-vars": 0,
+    "react/display-name": 0,
+    "no-unused-vars": 1,
     "no-console": 0,
+    "getter-return": 0,
     "no-const-assign": 2,
     "no-dupe-class-members": 2,
     "no-duplicate-case": 2,
     "no-extra-parens": [2, "functions"],
     "no-self-compare": 2,
+    "no-duplicate-imports": 2,
+    "no-this-before-super": 2,
+    "no-useless-constructor": 2,
+    "no-var": 0,
     "accessor-pairs": 2,
     "comma-spacing": [2, {
       "before": false,
@@ -59,12 +75,15 @@
         "afterColon": true
       }
     ],
+    "keyword-spacing": ["error", { "before": true }],
+    "lines-between-class-members": ["error", "always"],
     "new-parens": 2,
     "no-array-constructor": 2,
     "no-class-assign": 2,
     "no-cond-assign": 2,
     "no-trailing-spaces": 2,
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
     "max-len": ["error",
       {
         "code": 150,

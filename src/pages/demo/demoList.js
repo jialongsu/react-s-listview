@@ -1,6 +1,9 @@
 import React, {PureComponent} from 'react';
 import styles from './styles.scss';
-import ListView from '../../../lib/ListView/ListView';
+// import ListView from '../../../lib/ListView/ListView';
+import ListView from '../../../plib/ListView/ListView';
+
+// import ListView from '../../../dist/react-s-listview/react-listview';
 
 export default class DemoList extends PureComponent {
 
@@ -23,7 +26,7 @@ export default class DemoList extends PureComponent {
 	    this.setState({
 	      ary: ary.concat([1, 2, 3])
 	    });
-	    resolve(1);
+	    resolve();
 	  }, 1000);
 	};
 
